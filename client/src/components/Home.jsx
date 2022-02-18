@@ -1,11 +1,13 @@
 import React from 'react'
 import arraypic from '../pics/arrayimg1.png'; 
+import {Link} from 'react-router-dom';
 
  const Home = () => {
   return (
     <div>
-  <img src={arraypic} alt="array logo"/>
-  
+      <Link to="/login">
+  <img src={arraypic} alt="array logo" className='arrayLogo'/>
+      </Link>
       </div>
   )
 }
