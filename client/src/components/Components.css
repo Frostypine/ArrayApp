@@ -16,11 +16,11 @@
 }
 
 .card{
-    height: 15rem;
+    height: 10rem;
     width: 15rem;
     background-color: wheat;
     text-align: center;
-    padding-top: 1rem;
+    padding-top:4rem;
     border: 6px solid ; 
    
 }

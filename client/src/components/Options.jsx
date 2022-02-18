@@ -9,10 +9,12 @@ import arraypic from '../pics/arrayimg2.png'
 function Options() {
  
     return (
-        <Container className='Options'>
-                <Link to="/">
+      <div>               
+        <Link to="/">
   <img src={arraypic} alt="array logo" className='arrayPic'/>
       </Link>
+        <Container className='Options'>
+ 
        {/* <Link to="/">  
         <Card className='card home'>
       <Card.Text>     Home</Card.Text>
@@ -23,13 +25,13 @@ function Options() {
            <Card.Text> Lessons</Card.Text>  
           </Card>
           </Link>
-          <br/> 
+          &nbsp;&nbsp;
           <Link to="/resources">  
          <Card className='card resources'>
          <Card.Text> Resources</Card.Text>    
           </Card>
           </Link>
-          <br/>
+          &nbsp;&nbsp;
   
 
          <Link to="/assignments">
@@ -37,16 +39,17 @@ function Options() {
           <Card.Text>  Assignments</Card.Text>
           </Card>
           </Link>
-          <br/>
+          &nbsp;&nbsp;
           
        <Link to="/groupwork">   
         <Card className='card groupwork'>
         <Card.Text> Groupwork</Card.Text>  
           </Card>
           </Link>
-          <br/>
+          &nbsp;&nbsp;
     
     </Container>
+    </div>
     )
   }
 
