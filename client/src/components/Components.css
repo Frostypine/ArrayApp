@@ -54,7 +54,57 @@
 
 }
 
-.lessons{ border-color: red ;}
-.resources{border-color: yellow ;}
-.assignments{border-color: green ;}
-.Groupwork{border-color: blue ;}
+.array-home{
+    height: 10rem;
+}
+
+/* .lessons{ 
+    border-color: red ;
+    height: 30rem; 
+    width: 40rem;
+    padding-top: 10rem;
+    background-color: wheat;
+
+}
+.resources{
+    border-color: yellow ;
+    height: 30rem; 
+    width: 40rem;
+    padding-top: 10rem;
+    background-color: wheat;
+}
+.assignments{
+    border-color: green ;
+    height: 30rem; 
+    width: 40rem;
+    padding-top: 10rem;
+    background-color: wheat;
+}
+.groupwork{
+    border-color: blue ;
+    height: 30rem; 
+    width: 40rem;
+    padding-top: 10rem;
+    background-color: wheat;
+} */
+
+.Lessons{ 
+    border-color: red ;
+    background-color: 'wheat';
+    border: 6px solid; 
+}
+.Resources{
+    border-color: yellow ;
+    background-color: 'wheat';
+    border: 6px solid; 
+}
+.Assignments{
+    border-color: green ;
+    background-color: 'wheat';
+    border: 6px solid; 
+}
+.Groupwork{
+    border-color: blue ;
+    background-color: 'wheat';
+    border: 6px solid; 
+}
