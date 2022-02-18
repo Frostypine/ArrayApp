@@ -21,13 +21,14 @@ function Options() {
         </Card>
       </Link> <br/>*/}
        <Link to="/lessons">  
-           <Card className='card lessons'>
+           <Card style={{background: 'wheat', border: `6px solid red` }}className='card lessons'>
            <Card.Text> Lessons</Card.Text>  
           </Card>
           </Link>
           &nbsp;&nbsp;
+
           <Link to="/resources">  
-         <Card className='card resources'>
+         <Card style={{background: 'wheat', border: `6px solid yellow` }}className='card resources'>
          <Card.Text> Resources</Card.Text>    
           </Card>
           </Link>
@@ -35,14 +36,14 @@ function Options() {
   
 
          <Link to="/assignments">
-          <Card className='card assignments'>
+          <Card style={{background: 'wheat', border: `6px solid green` }} className='card assignments'>
           <Card.Text>  Assignments</Card.Text>
           </Card>
           </Link>
           &nbsp;&nbsp;
           
        <Link to="/groupwork">   
-        <Card className='card groupwork'>
+        <Card style={{background: 'wheat', border: `6px solid blue` }} className='card groupwork'>
         <Card.Text> Groupwork</Card.Text>  
           </Card>
           </Link>

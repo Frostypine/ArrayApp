@@ -1,18 +1,20 @@
 
 import './Components.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar,  Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-//import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navigation() 
 {
   return(
     <header className="navigation">
 <Navbar>
-  <Container>
-    <Navbar.Brand>Navbar with text</Navbar.Brand>
+  <Container style={{color:'white'}}>
+    <br/><br/><br/><br/>
+    <Navbar.Brand><Link to='/'>  Home</Link></Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
+    <br/><br/><br/><br/>
       <Navbar.Text>
     login spot  
       </Navbar.Text>
