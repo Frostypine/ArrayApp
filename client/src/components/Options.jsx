@@ -9,44 +9,48 @@ import arraypic from '../pics/arrayimg2.png'
 function Options() {
  
     return (
-        <Container className='Options'>
-                <Link to="/">
+      <div>               
+        <Link to="/">
   <img src={arraypic} alt="array logo" className='arrayPic'/>
       </Link>
+        <Container className='Options'>
+ 
        {/* <Link to="/">  
         <Card className='card home'>
       <Card.Text>     Home</Card.Text>
         </Card>
       </Link> <br/>*/}
        <Link to="/lessons">  
-           <Card className='card lessons'>
+           <Card style={{background: 'wheat', border: `6px solid red` }}className='card Lessons'>
            <Card.Text> Lessons</Card.Text>  
           </Card>
           </Link>
-          <br/> 
+          &nbsp;&nbsp;
+
           <Link to="/resources">  
-         <Card className='card resources'>
+         <Card style={{background: 'wheat', border: `6px solid yellow` }}className='card Resources'>
          <Card.Text> Resources</Card.Text>    
           </Card>
           </Link>
-          <br/>
+          &nbsp;&nbsp;
   
 
          <Link to="/assignments">
-          <Card className='card assignments'>
+          <Card style={{background: 'wheat', border: `6px solid green` }} className='card Assignments'>
           <Card.Text>  Assignments</Card.Text>
           </Card>
           </Link>
-          <br/>
+          &nbsp;&nbsp;
           
        <Link to="/groupwork">   
-        <Card className='card groupwork'>
+        <Card style={{background: 'wheat', border: `6px solid blue` }} className='card Groupwork'>
         <Card.Text> Groupwork</Card.Text>  
           </Card>
           </Link>
-          <br/>
+          &nbsp;&nbsp;
     
     </Container>
+    </div>
     )
   }
 

@@ -8,12 +8,12 @@ import Assignments     from './components/Assignments/Assignments';
 import Groupwork       from './components/Groupwork/Groupwork';
 import Lessons         from './components/Lessons/Lessons';
 import Resources       from './components/Resources/Resources';
-
+import Navigation      from './components/Navigation'; 
 
 function App() {
   return (
 <div className="App">
-     <header className="App-header">
+  {/*  */}<Navigation/>
      <Routes>
        <Route path="/"            element={<Home/>} />
        <Route path="/options"     element={<Options/>} />
@@ -24,7 +24,7 @@ function App() {
        <Route path="/resources"   element={<Resources/>} />
      </Routes>
 
-   </header>
+ 
     </div>
   );
 }
