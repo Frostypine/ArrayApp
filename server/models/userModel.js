@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
-    
+
     username: { type: String, required: true },
     password: { type: String},
     active: {type: Boolean, default: false},
-    email: { type: String, default: "" },
     avatar: {
       type: String,
       default:
