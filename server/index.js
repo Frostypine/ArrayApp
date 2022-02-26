@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-//import router from "./routes/router.js";
+import routes from "./routes/routes.js";
 
 
 
@@ -24,7 +24,7 @@ app.use(cors());
 
 
 //router
-//app.use("/api", router);
+app.use("/api", routes);
 
 //start server
 app.listen(PORT, () => {
