@@ -9,19 +9,23 @@ import Groupwork       from './components/Groupwork/Groupwork';
 import Lessons         from './components/Lessons/Lessons';
 import Resources       from './components/Resources/Resources';
 import Navigation      from './components/Navigation'; 
-
+import User from "./components/User/User";
 function App() {
   return (
 <div className="App">
   {/*  */}<Navigation/>
      <Routes>
        <Route path="/"            element={<Home/>} />
+       <Route path="/user/*" element={<User />} />
+
        <Route path="/options"     element={<Options/>} />
        <Route path="/login"       element={<UserLogin/>} />
        <Route path="/assignments" element={<Assignments/>} />
        <Route path="/groupwork"   element={<Groupwork/>} />
        <Route path="/lessons"     element={<Lessons/>} />
        <Route path="/resources"   element={<Resources/>} />
+
+
      </Routes>
 
  
