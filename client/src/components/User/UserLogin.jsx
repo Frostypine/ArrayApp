@@ -39,11 +39,15 @@ import { Form, InputGroup, FormControl, Button } from "react-bootstrap";
      <Button className='submitButton' variant="blue" type="submit"
      style={{height:'3rem', background: '',borderRadius:'15%', border: `3px solid white` }}
      >
-        <Link to="/options">  login </Link>
+        <Link to="/options"
+        style={{color: 'white'}}
+        >  login </Link>
        </Button> {/* &nbsp;&nbsp; */}
         <br/>
         <Link to="/user/sign-up">
-          <span className="sign-up-link primary">sign up</span>
+          <span className="sign-up-link primary"
+          style={{color: 'white'}}
+          >sign up</span>
         </Link>
       </Form>
     </div>
