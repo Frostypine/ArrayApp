@@ -1,3 +1,7 @@
-.user-sign-up{
-    top:100rem; 
+.user-login,
+.user-sign-up {
+  margin: auto;
+  margin-top: 80px;
+  width: 50%;
+  max-width: 300px;
 }

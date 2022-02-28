@@ -10,14 +10,12 @@ import { postUser } from "../../actions/userActions";
 function UserSignUp() {
   const dispatch = useDispatch();
   const users = useSelector(selectUsers);
-
   const [username, setUsername] = useState("");
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
 
   const checkAuth = (e) => {
     e.preventDefault();
-    
     if (username === "") return alert("username cannot be empty");
     if (password1 === "") return alert("create password cannot be empty");
     if (password2 === "") return alert("confirm password cannot be empty");
