@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { updateUser } from "../api/userAPI";
+//import { updateUser } from "../api/userAPI";
 
 let users = [];
 
@@ -29,10 +29,6 @@ export const usersSlice = createSlice({
         JSON.stringify(state.localUserInfo)
       );
     },
-    addRemoteUser: (state, action) => {
-
-      // state.users.push(action.payload)
-    },
     addUser: (state, action) => {
       state.users.push(action.payload);
       if (action.payload.password === "") {
@@ -61,15 +57,7 @@ export const usersSlice = createSlice({
         (user) => user._id === action.payload._id
       );
       state.users[index].active = action.payload.active;
-      state.users[index].socket_id = action.payload.socket_id;
-    },
-    editDisconnect: (state, action) => {
-      const index = state.users.findIndex(
-        (user) => user.socket_id === action.payload
-      );
-      state.users[index].active = false;
-      state.users[index].socket_id = "";
-      updateUser(state.users[index]._id, { socket_id: "", active: false })
+     
     },
     editUserAvatar: (state, action) => {
       const index = state.users.findIndex(
@@ -83,12 +71,10 @@ export const usersSlice = createSlice({
 export const {
   allUsers,
   loginUser,
-  addRemoteUser,
   addUser,
   editUser,
   removeUser,
   editUserActive,
-  editDisconnect,
   editUserAvatar,
 } = usersSlice.actions;
 

@@ -5,6 +5,9 @@ const userSchema = mongoose.Schema({
     username: { type: String, required: true },
     password: { type: String},
     active: {type: Boolean, default: false},
+
+    //lessonsRead: { type: Array, default: []}
+    //grades:{ type: Array, default: []}
     avatar: {
       type: String,
       default:
