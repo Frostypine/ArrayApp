@@ -2,6 +2,7 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import UserLogin from "./UserLogin";
 import UserSignUp from "./UserSignUp";
+import Options         from '../../components/Options';
 import { useSelector } from "react-redux";
 import { selectLocalUserInfo } from "../../state/usersSlice";
 
@@ -20,7 +21,22 @@ function User() {
           path="/sign-up"
           element={!loggedIn ? <UserSignUp /> : <Navigate to="/options" />}
         />
+
+<Route
+          path="/*"
+          element={
+            <div className="user">
+              {loggedIn ? <Options /> : <Navigate to="/user/login" />}
+              <div className="user-menu-vertical-line"></div>
+              <Routes>
+                
+               
+              </Routes>
+            </div>
+          }
+        />
       </Routes>
+      
     </>
   );
 }

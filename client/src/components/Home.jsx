@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
  const Home = () => {
   return (
     <div>
-      <Link to="/login">
+      <Link to="/user/login">
   <img src={arraypic} alt="array logo" className='arrayLogo'/>
       </Link>
       </div>
