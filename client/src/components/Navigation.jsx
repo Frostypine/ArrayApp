@@ -93,13 +93,13 @@ function Navigation()
                     </NavDropdown.Item>
 
                     <NavDropdown.Divider /> */}
-                    <NavDropdown.Item
+                    {/* <NavDropdown.Item
                       onClick={() => {
                         logout();
                       }}
                     >
                       Logout
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> */}
                   </NavDropdown>
                 </div>
               ) : (
