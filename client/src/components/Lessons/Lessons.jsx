@@ -1,5 +1,7 @@
 
 import '../Components.css'; 
+import NewLesson from './NewLesson';
+import {Link} from 'react-router-dom';
 
 function Lessons () {
     return ( 
@@ -11,11 +13,17 @@ function Lessons () {
          border: `6px solid red` ,
          height: '30rem',
          width: '40rem',
-         paddingTop: '0rem'
+         paddingTop: '0rem',
+         color: 'red',
          }}>
              Lessons
+             <br/>
+             <Link to="/newlesson"> 
+           new lesson
+            </Link>
+
             
-             </div>    {/*  */}
+             </div>    {/* <NewLesson />  */}
 
     </div>
         );

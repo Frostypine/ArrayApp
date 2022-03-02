@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const lessonSchema = mongoose.Schema({
+   id: {type: Number, default: 0},
    title: { type: String, required: true },
    author: { type: String, required: true },
    //read: {type: Boolean, default: false},

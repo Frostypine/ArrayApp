@@ -1,53 +1,75 @@
 
-import React from "react";
-import { useState } from "react";
-import { Form, InputGroup, FormControl, Button } from "react-bootstrap";
+import React, { useState } from "react";
+
+import { Container, Modal,Form, InputGroup, FormControl, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUsers } from "../../state/lessonsSlice";
-import { postUser } from "../../actions/lessonActions";
+import { selectLessons } from "../../state/lessonSlice";
+import { postLesson } from "../../actions/lessonActions";
 
 
-function UserSignUp() {
+
+
+
+
+function NewLesson() {
+
+    const [show, setShow] = useState(false);
+    const handleShow = () => {
+      setShow(true); 
+    }
+    const handleClose = () => setShow(false);
+
   const dispatch = useDispatch();
-  const lessons = useSelector(selectUsers);
-  const [title, setUsername] = useState("");
+ // const lessons = useSelector(selectLessons);
+  const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [text, setText] = useState("");
+  const [id, setID] = useState("");
 
-  const submitLesson= (e) => {
-    e.preventDefault();
-    if (title === "") return alert("title cannot be empty");
-    if (author === "") return alert("author cannot be empty");
-    if (text === "") return alert("text cannot be empty");
-    let lesson = lessons.find((e) => e.title === title);
-    if (lesson) return alert("title already exists");
-    dispatch(
-      postUser({
-        title: title,
-        author: author,
-        text: text,
-      })
-    );
-  };
+//   const submitLesson= (e) => {
+//     e.preventDefault();
+//     if (title === "") return alert("title cannot be empty");
+//     if (author === "") return alert("author cannot be empty");
+//     if (text === "") return alert("text cannot be empty");
+//     let lesson = lessons.find((e) => e.title === title);
+//     if (lesson) return alert("title already exists");
+//     dispatch(
+//       postLesson({
+//         title: title,
+//         author: author,
+//         text: text,
+//         id: id,
+//       })
+//     );
+//   };
 
   return (
-    <div className="lesson-sign-up">
-        <br/>  <br/>
+    <Container className="lesson-sign-up">
+      <Modal show={show} onHide={handleClose}width="100rem">
+
       <Form
-        onSubmit={(e) => {
-          submitLesson(e);
-        }}
-      >
+        // onSubmit={(e) => {
+        //   submitLesson(e);
+        // }}
+      >   <br/>  <br/>
     Sign Up
         <Form.Group className="mb-3" >
           <InputGroup>
             <FormControl
               className="title-input"
-              id="inlineFormInputGroupUsername"
               placeholder="create title"
               value={title}
               onChange={(e) => {
-                setUsername(e.target.value);
+                setTitle(e.target.value);
+              }}
+            />
+                  <FormControl
+              className="id-input"
+              id="inlineFormInputGroupUsername"
+              placeholder="give id"
+              value={id}
+              onChange={(e) => {
+                setID(e.target.value);
               }}
             />
           </InputGroup>
@@ -73,16 +95,20 @@ function UserSignUp() {
             }}
           />
         </Form.Group>
-      
+   
         <Button variant="green" type="submit"
        style={{height:'3rem', background: '',borderRadius:'15%', border: `3px solid white`,
-       color:'white' }}
+        }}
         >
           submit
         </Button>
       </Form>
-    </div>
+   </Modal>
+   <br/><br/>
+   <Button onClick={handleShow}>New Lesson</Button>
+      
+    </Container>
   );
 }
 
-export default UserSignUp;
+export default NewLesson;
