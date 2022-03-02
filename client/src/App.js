@@ -11,6 +11,8 @@ import Navigation      from './components/Navigation';
 
 //import User from "./components/User/User";
 //import UserLogin       from './components/User/UserLogin';
+import NewLesson from './components/Lessons/NewLesson';
+
 function App() {
   return (
 <div className="App">
@@ -19,7 +21,7 @@ function App() {
        <Route path="/"            element={<Home/>} />
        {/* <Route path="/user/*" element={<User />} />
         <Route path="/login"       element={<UserLogin/>} /> */}
-
+      <Route path="/newlesson"     element={<NewLesson/>} />
 
        <Route path="/options"     element={<Options/>} />
        

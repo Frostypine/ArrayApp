@@ -12,7 +12,7 @@ if (!localLessonInfo) {
   localStorage.setItem("localLessonInfo", JSON.stringify(localLessonInfo));
 }
 
-export const lessonsSlice = createSlice({
+export const lessonSlice = createSlice({
   name: "lessons",
   initialState: {
     lessons,
@@ -52,7 +52,7 @@ export const lessonsSlice = createSlice({
     //   );
     //   state.lessons[index].read = action.payload.read;
     // },
-    
+
     // editLessonPicture: (state, action) => {
     //   const index = state.lessons.findIndex(
     //     (lesson) => lesson._id === action.payload._id
@@ -78,9 +78,9 @@ export const {
   //editLessonRead,
   editLessonText,
   //editLessonPicture,
-} = lessonsSlice.actions;
+} = lessonSlice.actions;
 
 export const selectLessons = (state) => state.lessons.lessons;
 export const selectLocalLessonInfo = (state) => state.lessons.localLessonInfo;
 
-export default lessonsSlice.reducer;
+export default lessonSlice.reducer;
