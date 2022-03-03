@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectLessons } from "../../state/lessonSlice";
 import { postLesson } from "../../actions/lessonActions";
 
-
+import './Lesson.css'
+import '../Components.css'
 
 
 
@@ -20,39 +21,40 @@ function NewLesson() {
     const handleClose = () => setShow(false);
 
   const dispatch = useDispatch();
- // const lessons = useSelector(selectLessons);
+  //const lessons = useSelector(selectLessons);
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [text, setText] = useState("");
   const [id, setID] = useState("");
 
-//   const submitLesson= (e) => {
-//     e.preventDefault();
-//     if (title === "") return alert("title cannot be empty");
-//     if (author === "") return alert("author cannot be empty");
-//     if (text === "") return alert("text cannot be empty");
-//     let lesson = lessons.find((e) => e.title === title);
-//     if (lesson) return alert("title already exists");
-//     dispatch(
-//       postLesson({
-//         title: title,
-//         author: author,
-//         text: text,
-//         id: id,
-//       })
-//     );
-//   };
+  const submitLesson= (e) => {
+    e.preventDefault();
+    if (title === "") return alert("title cannot be empty");
+    if (author === "") return alert("author cannot be empty");
+    if (text === "") return alert("text cannot be empty");
+    //let lesson = lessons.find((e) => e.title === title);
+    //if (lesson) return alert("title already exists");
+    dispatch(
+      postLesson({
+        title: title,
+        author: author,
+        text: text,
+        id: id,
+      })
+    );
+  handleClose(); 
+};
 
   return (
     <Container className="lesson-sign-up">
       <Modal show={show} onHide={handleClose}width="100rem">
 
       <Form
-        // onSubmit={(e) => {
-        //   submitLesson(e);
-        // }}
+        onSubmit={(e) => {
+          submitLesson(e);
+        }}
       >   <br/>  <br/>
-    Sign Up
+  &nbsp; New Lesson 
         <Form.Group className="mb-3" >
           <InputGroup>
             <FormControl
@@ -78,7 +80,7 @@ function NewLesson() {
         <Form.Group className="mb-3" >
           <Form.Control
             className="author-input"
-            placeholder="create password"
+            placeholder="author"
             value={author}
             onChange={(e) => {
               setAuthor(e.target.value);
@@ -86,7 +88,7 @@ function NewLesson() {
           />
         </Form.Group>
         <Form.Group className="mb-3" >
-          <Form.Control
+          <Form.Control as="textarea"
             className="text-input"
             placeholder="enter content"
             value={text}

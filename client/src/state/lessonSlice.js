@@ -21,6 +21,7 @@ export const lessonSlice = createSlice({
   reducers: {
     allLessons: (state, action) => {
       state.lessons = action.payload;
+      console.log(action.payload)
     },
     
     addLesson: (state, action) => {

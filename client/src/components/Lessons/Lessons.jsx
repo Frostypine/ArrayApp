@@ -1,7 +1,10 @@
-
+import React,{ useEffect } from 'react';
 import '../Components.css'; 
 import NewLesson from './NewLesson';
 import {Link} from 'react-router-dom';
+import LessonList from './LessonList';
+//import { useDispatch, useSelector } from "react-redux";
+//import { selectLessons } from "../../state/lessonSlice";
 
 function Lessons () {
     return ( 
@@ -17,13 +20,10 @@ function Lessons () {
          color: 'red',
          }}>
              Lessons
-             <br/>
-             <Link to="/newlesson"> 
-           new lesson
-            </Link>
+             <NewLesson/>
+                  <LessonList/>
 
-            
-             </div>    {/* <NewLesson />  */}
+             </div>    
 
     </div>
         );
