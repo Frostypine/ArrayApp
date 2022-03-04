@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 
 import { Container, Modal,Form, InputGroup, FormControl, Button } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { selectLessons } from "../../state/lessonSlice";
+import { useDispatch } from "react-redux";
+//import {useSelector} from 'react-redux'
+//import { selectLessons } from "../../state/lessonSlice";
 import { postLesson } from "../../actions/lessonActions";
 
 import './Lesson.css'
@@ -32,6 +33,7 @@ function NewLesson() {
     if (title === "") return alert("title cannot be empty");
     if (author === "") return alert("author cannot be empty");
     if (text === "") return alert("text cannot be empty");
+    //if (id !anumber) return alert("id has to be a number"); 
     //let lesson = lessons.find((e) => e.title === title);
     //if (lesson) return alert("title already exists");
     dispatch(

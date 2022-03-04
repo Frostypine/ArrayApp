@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+//import  { Component } from 'react';
+import { useSelector } from "react-redux";
+//import {useDispatch} from "react-redux"
 import { selectLessons } from "../../state/lessonSlice";
 import {useParams} from "react-router-dom"; 
-import { useEffect } from 'react';
-import { getLessons } from '../../actions/lessonActions';
+//import { useEffect } from 'react';
+//import { getLessons } from '../../actions/lessonActions';
 
 // const Lessons = [
 //     {
@@ -19,7 +21,7 @@ import { getLessons } from '../../actions/lessonActions';
 //   ]
 function LessonPage () {
     const {lessonid} = useParams();
-    const dispatch = useDispatch(); 
+    //const dispatch = useDispatch(); 
     //console.log(lessonid)
    const Lessons = useSelector(selectLessons);
    // currentLessonInfo = useSelector(selectCurrentLessonInfo)

@@ -2,7 +2,8 @@ import './App.css';
 import React from 'react'
 import {Route, Routes} from "react-router-dom"; 
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
+//import {useSelector }from "react-redux";
 import { getLessons } from "./actions/lessonActions";
 
 import Home            from './components/Home';
@@ -22,8 +23,7 @@ import LessonPage from './components/Lessons/LessonPage';
 function App() {
   const dispatch  = useDispatch(); 
   useEffect(() => {
-    dispatch(getLessons())
-} , [] );
+    dispatch(getLessons()) } , [] );
   return (
 <div className="App">
   {/*  */}<Navigation/>
