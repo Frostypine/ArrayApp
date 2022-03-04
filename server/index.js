@@ -7,7 +7,7 @@ import routes from "./routes/routes.js";
 
 const app = express();
 const PORT = (process.env.PORT || 5000);
-const CONNECTION = "mongodb://localhost:27017";
+const CONNECTION = "mongodb://localhost:27017/arraydb";
 
 
 

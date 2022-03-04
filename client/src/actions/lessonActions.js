@@ -7,8 +7,11 @@ import {
 } from "../state/lessonSlice.js";
 
 export const getLessons = () => async (dispatch) => {
+  
   try {
     const { data } = await api.readLessons();
+  // console.log(data)
+
     dispatch(allLessons(data));
   } catch (error) {
     console.log(error);
@@ -16,6 +19,7 @@ export const getLessons = () => async (dispatch) => {
 };
 
 export const postLesson = (newLesson) => async (dispatch) => {
+ // console.log(newLesson)
   try {
     const { data } = await api.createLesson(newLesson);
     dispatch(addLesson(data));

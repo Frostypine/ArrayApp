@@ -1,8 +1,11 @@
-
+import React from 'react';
 import '../Components.css'; 
 import NewLesson from './NewLesson';
-import {Link} from 'react-router-dom';
-
+import LessonList from './LessonList';
+//import { useDispatch, useSelector } from "react-redux";
+//import { selectLessons } from "../../state/lessonSlice";
+//import {Link} from 'react-router-dom';
+//import { useEffect } from 'react';
 function Lessons () {
     return ( 
     <div className="lessons"
@@ -17,13 +20,10 @@ function Lessons () {
          color: 'red',
          }}>
              Lessons
-             <br/>
-             <Link to="/newlesson"> 
-           new lesson
-            </Link>
+             
+                  <LessonList/><NewLesson/>
 
-            
-             </div>    {/* <NewLesson />  */}
+             </div>    
 
     </div>
         );

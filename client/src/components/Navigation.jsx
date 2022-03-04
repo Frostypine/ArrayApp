@@ -7,39 +7,40 @@ import arrayPic from '../pics/arrayimg1.png';
 import { Link } from "react-router-dom";
 //import { useState } from "react";//, useEffect
 //import { useLocation, useNavigate } from "react-router";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+//import { useDispatch } from 'react-redux';
 import {
-  editUserActive,
+ // editUserActive,
   selectLocalUserInfo,
   selectUsers,
 } from "../state/usersSlice";
-import { postUser } from "../actions/userActions";
-import { updateUser } from "../api/userAPI";
+//import { postUser } from "../actions/userActions";
+//import { updateUser } from "../api/userAPI";
 
 function Navigation() 
 {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const localUserInfo = useSelector(selectLocalUserInfo);
   const loggedIn = localUserInfo.loggedIn;
   const users = useSelector(selectUsers);
   const user = users.find((e) => e._id === localUserInfo.user_id);
 
-  const logout = () => {
-    const userData = {
-      _id: localUserInfo.user_id,
-      active: false,
-    };
-    updateUser(userData._id, {
-      active: userData.active,
-    });
-    dispatch(editUserActive(userData));
-    dispatch(
-      postUser({
-        username: "",
-        password: "",
-      })
-    );
-  };
+  // const logout = () => {
+  //   const userData = {
+  //     _id: localUserInfo.user_id,
+  //     active: false,
+  //   };
+  //   updateUser(userData._id, {
+  //     active: userData.active,
+  //   });
+  //   dispatch(editUserActive(userData));
+  //   dispatch(
+  //     postUser({
+  //       username: "",
+  //       password: "",
+  //     })
+  //   );
+  // };
 
 
    //const [login, setLogin] = useState("");

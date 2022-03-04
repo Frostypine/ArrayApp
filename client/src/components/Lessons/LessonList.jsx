@@ -1,8 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+//import { useDispatch } from 'react-redux';
 import { selectLessons } from "../../state/lessonSlice";
-import {Link,  useNavigate} from 'react-router-dom';
-import Lessons from './Lessons';
+import {Link} from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
+import './Lesson.css'; 
 
 //page access limited to role mods
 //this function will take out the lessons stored in db and list them...maybe 
@@ -10,25 +12,27 @@ import Lessons from './Lessons';
 //seperate pages for create or delete but buttons here to lead to them? 
 
  function LessonList() {
-   const navigate = useNavigate();
- // const lessons = useSelector(selectLessons);
+  // const navigate = useNavigate();
+ const Lessons = useSelector(selectLessons);
 
   return (
-    <div>
-      LessonList
+    <div className='lesson-list'>
       
-      
+
       {Lessons.map((data, i)=> {
         return (
           <div
-          className='lesson-list'
+          
           key={`lesson${i}`}
-          onClick={()=> {navigate(`lessons/${data.id}`)}}
+         // onClick={()=> {navigate(`lessons/${data.id}`)}}
           > 
+        <Link to={`page/${data.id}`}>
           {`${data.title}`}
+          </Link>
           </div> 
        );
       })}
+
       </div>
   );
 }

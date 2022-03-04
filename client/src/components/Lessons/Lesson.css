@@ -1,0 +1,25 @@
+.lesson-list{
+  
+    margin: auto; 
+    height: calc(100vh - 530px);
+    width: 25rem; 
+    overflow-y: scroll;
+    padding: 10px;
+    
+}
+
+.lesson-sign-up{
+    /* top:1rem; 
+     padding: 2px; */
+    text-align: center;
+   
+}
+
+
+.title-input{}
+.id-input{}
+.author-input{}
+.text-input{
+    text-align: left;
+    height: 10rem; 
+}

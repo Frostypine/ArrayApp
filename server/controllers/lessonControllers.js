@@ -12,8 +12,9 @@ export const getLessons = async (req, res) => {
 
 export const postLesson = async (req, res) => {
   const lesson = req.body;
-  const existing = await Lessons.find({ lessonname: req.body.lessonname });
-  if (existing < 1) {
+  //console.log(lesson)
+  //const existing = await Lessons.find({ lessonname: req.body.lessonname });
+  //if (existing < 1) {
     const newLesson = new Lessons({
       ...lesson,
       createdAt: new Date().toISOString(),
@@ -24,7 +25,7 @@ export const postLesson = async (req, res) => {
     } catch (error) {
       res.status(409).json({ message: error });
     }
-  }
+  //}
 };
 
 export const patchLesson = async (req, res) => {
