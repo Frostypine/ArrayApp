@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch} from "react-redux";
 //import {useSelector }from "react-redux";
 import { getLessons } from "./actions/lessonActions";
+import { getResources } from './actions/resourceActions';
 
 import Home            from './components/Home';
 import Options         from './components/Options';
@@ -16,22 +17,27 @@ import Navigation      from './components/Navigation';
 
 //import User from "./components/User/User";
 //import UserLogin       from './components/User/UserLogin';
-import NewLesson from './components/Lessons/NewLesson';
+//import NewLesson from './components/Lessons/NewLesson';
 import LessonPage from './components/Lessons/LessonPage';
 
 
 function App() {
   const dispatch  = useDispatch(); 
   useEffect(() => {
-    dispatch(getLessons()) } , [] );
+   dispatch(getLessons()) } , [] );
+
+  useEffect(() => {
+    dispatch(getResources()) } , [] );
+    
   return (
 <div className="App">
   {/*  */}<Navigation/>
      <Routes>
        <Route path="/"            element={<Home/>} />
        {/* <Route path="/user/*" element={<User />} />
-        <Route path="/login"       element={<UserLogin/>} /> */}
-      <Route path="/newlesson"     element={<NewLesson/>} />
+        <Route path="/login"       element={<UserLogin/>} /> 
+        <Route path="/newlesson"     element={<NewLesson/>} />*/}
+      
      <Route path="/lessons"     element={<Lessons/>} />
      <Route path="/lessons/page/:lessonid"     element={<LessonPage/>} />
 
