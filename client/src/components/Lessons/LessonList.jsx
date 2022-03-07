@@ -26,8 +26,10 @@ import './Lesson.css';
           key={`lesson${i}`}
          // onClick={()=> {navigate(`lessons/${data.id}`)}}
           > 
-        <Link to={`page/${data.id}`} href={"http://localhost:3000/lessons/" + `page/${data.id}`}  >
-          {`${data.title}`}
+        <Link to={`page/${data.id}`}   >
+          {/* < a href={"http://localhost:3000/lessons/" + `page/${data.id}`}>  */}
+          {`${data.title}`} 
+          {/* </a> */}
           </Link>
           </div> 
        );
