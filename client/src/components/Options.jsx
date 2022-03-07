@@ -27,17 +27,17 @@ function Options() {
           </Link>
           &nbsp;&nbsp;
 
-          <Link to="/resources">  
+          <Link to="/assignments">  
          <Card style={{background: 'wheat', border: `6px solid yellow` }}className='card Resources'>
-         <Card.Text> Resources</Card.Text>    
+         <Card.Text> Assignments</Card.Text>    
           </Card>
           </Link>
           &nbsp;&nbsp;
   
 
-         <Link to="/assignments">
+         <Link to="/resources">
           <Card style={{background: 'wheat', border: `6px solid green` }} className='card Assignments'>
-          <Card.Text>  Assignments</Card.Text>
+          <Card.Text> Resources </Card.Text>
           </Card>
           </Link>
           &nbsp;&nbsp;

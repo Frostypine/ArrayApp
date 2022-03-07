@@ -20,6 +20,7 @@ const userSchema = mongoose.Schema({
       },
     Admin: {type: Boolean, default: false},
     Mod: {type: Boolean, default: false},
+    //lessonsRead: { type: Array, default: [] }, 
 });
 
 const Users = mongoose.model("user", userSchema);

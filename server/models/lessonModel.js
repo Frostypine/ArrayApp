@@ -11,7 +11,12 @@ const lessonSchema = mongoose.Schema({
    type: String,
    default: new Date().toISOString,
   },
-
+  // picture: {
+  //   type: String,
+  //   default:
+  //     "",
+  //   limit: "50mb",
+  // },
 });
 
 const Lessons = mongoose.model("lesson", lessonSchema)
