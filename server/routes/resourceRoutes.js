@@ -1,10 +1,10 @@
 import express from "express";
 import {
-  getResource,
+  getResources,
   postResource,
   patchResource,
   deleteResource,
-} from "../controllers/lessonControllers.js";
+} from "../controllers/ResourceControllers.js";
 
 const router = express.Router()
 
