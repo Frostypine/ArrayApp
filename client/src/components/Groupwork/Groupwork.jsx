@@ -7,7 +7,8 @@ function Groupwork () {
          border: `6px solid blue` ,
          height: '30rem',
          width: '40rem',
-         paddingTop: '0rem'
+         paddingTop: '0rem',
+         color: 'blue'
          }}>
             Groupwork
             

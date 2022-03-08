@@ -14,7 +14,7 @@ import Groupwork       from './components/Groupwork/Groupwork';
 import Lessons         from './components/Lessons/Lessons';
 import Resources       from './components/Resources/Resources';
 import Navigation      from './components/Navigation'; 
-
+import Schedule         from './components/Assignments/Schedule';
 //import User from "./components/User/User";
 //import UserLogin       from './components/User/UserLogin';
 //import NewLesson from './components/Lessons/NewLesson';
@@ -44,6 +44,8 @@ function App() {
        <Route path="/options"     element={<Options/>} />
        
        <Route path="/assignments" element={<Assignments/>} />
+       <Route path="/schedule" element={<Schedule/>} />
+
        <Route path="/groupwork"   element={<Groupwork/>} />
       
        <Route path="/resources"   element={<Resources/>} />
