@@ -67,24 +67,24 @@
 .array-home{
     height: 10rem;
 }
-
-/* .lessons{ 
+/* 
+ .lessons{ 
     border-color: red ;
-    height: 30rem; 
+    height:calc(100vh - 330px);
     width: 40rem;
     padding-top: 10rem;
     background-color: wheat;
 
 }
 .resources{
-    border-color: yellow ;
+    border-color: green ;
     height: 30rem; 
     width: 40rem;
     padding-top: 10rem;
     background-color: wheat;
 }
 .assignments{
-    border-color: green ;
+    border-color: yellow ;
     height: 30rem; 
     width: 40rem;
     padding-top: 10rem;
@@ -96,7 +96,7 @@
     width: 40rem;
     padding-top: 10rem;
     background-color: wheat;
-} */
+} 
 
 .Lessons{ 
     border-color: red ;
@@ -117,4 +117,4 @@
     border-color: blue ;
     background-color: 'wheat';
     border: 6px solid; 
-}
+} */
