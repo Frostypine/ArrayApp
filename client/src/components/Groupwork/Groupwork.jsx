@@ -1,3 +1,6 @@
+import React from 'react';
+//import GroupBox from './GroupBox';
+
 function Groupwork () {
     return ( 
     <div className="groupwork">

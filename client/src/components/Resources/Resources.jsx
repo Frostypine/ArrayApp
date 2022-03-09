@@ -1,5 +1,6 @@
 import NewResource from "./NewResource";
 import ResourceList from "./ResourceList";
+import {Link} from 'react-router-dom';
 
 function Resources () {
     return ( 
@@ -8,14 +9,15 @@ function Resources () {
     <div style={{
         background: 'wheat',
          border: `6px solid green` ,
-         height: '30rem',
+         height: '32rem',
          width: '40rem',
          paddingTop: '0rem',
          color: 'green'
          }}>
             Resources
-            <ResourceList/>
+            <ResourceList/><Link to=""> Lesson Quizzes</Link>
             <NewResource/>
+            
              </div> 
     </div>
         );
