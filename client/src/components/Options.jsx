@@ -10,9 +10,9 @@ function Options() {
  
     return (
       <div>               
-        <Link to="/">
+        <a href="https://www.arrayschool.com/">
   <img src={arraypic} alt="array logo" className='arrayPic'/>
-      </Link>
+      </a>
         <Container className='Options'>
  
        {/* <Link to="/">  
