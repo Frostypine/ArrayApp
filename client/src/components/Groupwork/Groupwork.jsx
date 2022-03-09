@@ -14,7 +14,7 @@ function Groupwork () {
          color: 'blue'
          }}>
             Groupwork
-            
+            {/* <GroupBox/> */}
              </div> 
     </div>
         );

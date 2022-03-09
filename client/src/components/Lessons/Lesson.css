@@ -1,3 +1,20 @@
+.lessonText{
+    color: black; 
+    height: calc(100vh - 430px);
+    width: 36rem; 
+    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    word-wrap: break-word;
+    padding-left: 5rem;
+    text-align: left;
+    /*  */
+}
+.lessonTitle{
+    font-weight: bold;
+    color: red; 
+}
 .lesson-list{
   
     margin: auto; 
