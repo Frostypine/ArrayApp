@@ -1,42 +1,39 @@
 import React from 'react';
-//import  { Component } from 'react';
 import { useSelector } from "react-redux";
-//import {useDispatch} from "react-redux"
 import { selectLessons } from "../../state/lessonSlice";
 import {useParams} from "react-router-dom"; 
-//import { useEffect } from 'react';
-//import { getLessons } from '../../actions/lessonActions';
+import './Lesson.css';
 
-// const Lessons = [
-//     {
-//       title: "Preparation",
-//       id: 0,
-//       text: "content about preparation",
-//     },
-//     {
-//       title: "Design and Prototyping",
-//       id: 1,
-//       text: "content about Design and Prototyping "
-//     }
-//   ]
 function LessonPage () {
     const {lessonid} = useParams();
-    //const dispatch = useDispatch(); 
-    //console.log(lessonid)
+ 
    const Lessons = useSelector(selectLessons);
-   // currentLessonInfo = useSelector(selectCurrentLessonInfo)
-   // location = useLocation()
-   //const lessonInfo 
-
 
     return (
-        <div>
-      <div>{Lessons[lessonid].title}</div>
-      <div>{Lessons[lessonid].text}</div>
-      {/* <div>{{Lessons[lessonid].title}</div>
+    <div className='Lessons'>
+        <br/>
+        <div
+        style={{
+          background: 'wheat',
+           border: `6px solid red` ,
+           height: '30rem',
+           width: '40rem',
+           paddingTop: '0rem',
+           //color: 'red',
+           paddingTop: '2rem'
+           }}
+        >
+       {/* <img src={Lessons[lessonid].pic} alt="array logo" className='lesson picture'/>*/} 
+      <div className='lessonTitle'>{Lessons[lessonid].title}
+      {` `} by {Lessons[lessonid].author}
+      </div>
+     
+      <div className='lessonText'>{Lessons[lessonid].text}</div>
+      {/*  &nbsp;
        <div>{lesson.author}</div>
         */}
       </div>
+  </div>
     )
   
 }

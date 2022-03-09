@@ -26,24 +26,24 @@ function Calendar(name, dueDate) {
   this.dueDate = dueDate;
 }
 
-let studentArr = ["Alex", "Anthony", "Bowen", "Dustin", "Ethan", "Katie", "Shawn", "Steve", "Taylor", "Trevor", "Rison", "Solomon"];
+let groupMemberArr = ["Alex", "Anthony", "Bowen", "Dustin", "Ethan", "Katie", "Shawn", "Steve", "Taylor", "Trevor", "Rison", "Solomon"];
 
 
-//create student list box
-let studentList = document.querySelector(".student-list")
+//create groupMember list box
+let groupMemberList = document.querySelector(".groupMember-list")
 
-for (let i = 0; i < studentArr.length; i++) {
-  let studentPill = document.createElement("a")
-  studentPill.draggable = "true";
-  studentPill.setAttribute("ondragstart", "drag(event)");
-  studentPill.id = `drag${i}`
-  studentPill.classList.add('pill');
-  //if students become users then instead of random...
+for (let i = 0; i < groupMemberArr.length; i++) {
+  let groupMemberPill = document.createElement("a")
+  groupMemberPill.draggable = "true";
+  groupMemberPill.setAttribute("ondragstart", "drag(event)");
+  groupMemberPill.id = `drag${i}`
+  groupMemberPill.classList.add('pill');
+  //if groupMembers become users then instead of random...
   let bgColor = Math.floor(Math.random()*16777215).toString(16)
-  studentPill.style.backgroundColor = `#${bgColor}`;
-  studentPill.classList.add(`${studentArr[i]}`)
-  studentPill.innerHTML = `${studentArr[i]}`
-  studentList.appendChild(studentPill)
+  groupMemberPill.style.backgroundColor = `#${bgColor}`;
+  groupMemberPill.classList.add(`${groupMemberArr[i]}`)
+  groupMemberPill.innerHTML = `${groupMemberArr[i]}`
+  groupMemberList.appendChild(groupMemberPill)
 }
 
 
@@ -67,30 +67,30 @@ function drop(e) {
 let pillDrop = (e) => {
   if (e.target.innerHTML === "" || e.target.tagName === "DIV") {
     let data = e.dataTransfer.getData("text");
-    let student = e.dataTransfer.getData("name");
+    let groupMember = e.dataTransfer.getData("name");
     e.target.appendChild(document.getElementById(data));
     let slot = e.target.id
     console.log(slot)
-    let cal = `${student}Calendar`
-    cal = new Calendar(student, slot)
+    let cal = `${groupMember}Calendar`
+    cal = new Calendar(groupMember, slot)
     if (e.target.tagName !== "DIV") {
       calArr.push(cal)}
       else {
         calArr.pop(cal)
       }
     calendarUpload();
-    (e.target.tagName !== "DIV")? printSchedule(slot, student):printRetraction()
+    (e.target.tagName !== "DIV")? printSchedule(slot, groupMember):printRetraction()
   }
 }
 
 //create schedule message
 
-function printSchedule(slot, student) {
+function printSchedule(slot, groupMember) {
   let task
   let dueDate
   message = document.querySelector('#message')
   /*
-  `${student} will take ${task[?].id} due at ${task[?].dueDate}`
+  `${groupMember} will take ${task[?].id} due at ${task[?].dueDate}`
   
   */
 
@@ -114,7 +114,7 @@ function printSchedule(slot, student) {
     default:
       break;
   }
-  message.innerHTML = `${student} will take ${task} due at ${dueDate}`
+  message.innerHTML = `${groupMember} will take ${task} due at ${dueDate}`
 }
 
 let printRetraction = () => {
@@ -168,10 +168,10 @@ let setCalendar = (data) => {
   updatedCalArr = (JSON.parse(data));
 
   for (let i = 0; i < updatedCalArr.length; i++) {
-    let studentName = document.querySelector(`.${updatedCalArr[i].name}`)
+    let groupMemberName = document.querySelector(`.${updatedCalArr[i].name}`)
     let timeSlot = document.querySelector(`#${updatedCalArr[i].dueDate}`)
     console.log(updatedCalArr)
-    timeSlot.appendChild(studentName)
+    timeSlot.appendChild(groupMemberName)
   }
 }
 const init = () => {
