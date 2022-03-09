@@ -12,7 +12,9 @@ export const getResources = async (req, res) => {
 
 export const postResource = async (req, res) => {
   const resource = req.body;
- 
+  //console.log(resource)
+  //const existing = await Resources.find({ resourcename: req.body.resourcename });
+  //if (existing < 1) {
     const newResource = new Resources({
       ...resource,
       createdAt: new Date().toISOString(),
@@ -23,7 +25,7 @@ export const postResource = async (req, res) => {
     } catch (error) {
       res.status(409).json({ message: error });
     }
-  
+  //}
 };
 
 export const patchResource = async (req, res) => {
