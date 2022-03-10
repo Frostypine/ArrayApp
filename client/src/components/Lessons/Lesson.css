@@ -3,7 +3,7 @@
     height: calc(100vh - 430px);
     width: 36rem; 
     overflow-y: scroll;
-    overflow-y: hidden;
+ /* overflow-y: hidden; */
     overflow-x: hidden;
 
     word-wrap: break-word;
