@@ -1,5 +1,5 @@
 import React from 'react';
-import GroupBox from './GroupBox';
+import GroupBox from './TaskAssignment';
 
 function Groupwork () {
     return ( 
@@ -8,14 +8,16 @@ function Groupwork () {
     <div style={{
         background: 'wheat',
          border: `6px solid blue` ,
-         height: '30rem',
+         height: '34rem',
          width: '40rem',
          paddingTop: '0rem',
          color: 'blue'
          }}>
             Groupwork
             <GroupBox/>
-             </div> 
+            
+
+       </div> 
     </div>
         );
 }

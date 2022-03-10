@@ -25,4 +25,6 @@ const tasks = [
         info: "this is a thing to do",
         dueDate: "Friday",
     }
-]
+];
+
+export default tasks; 

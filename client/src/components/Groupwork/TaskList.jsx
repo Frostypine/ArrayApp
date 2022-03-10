@@ -1,4 +1,4 @@
-import ReactTooltip from 'react-tooltip';
+
 
 import React from 'react';
 import { useSelector } from "react-redux";
@@ -21,7 +21,7 @@ import './Groupwork.css';
           <div
           key={`task${i}`}
           > 
-
+         {data.name}
           </div> 
        );
       })}

@@ -81,8 +81,8 @@ function NewTask() {
         {/* <br /> */}
         <Form.Group className="mb-3" >
           <Form.Control
-            className="for-input"
-            placeholder="for"
+            className="info-input"
+            placeholder="info"
             value={info}
             onChange={(e) => {
               setFor(e.target.value);
@@ -92,7 +92,7 @@ function NewTask() {
         <Form.Group className="mb-3" >
           <Form.Control as="textarea"
             className="duedate-input"
-            placeholder="duedate"
+            placeholder="due date"
             value={duedate}
             onChange={(e) => {
               setURL(e.target.value);

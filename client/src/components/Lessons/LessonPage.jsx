@@ -20,7 +20,7 @@ function LessonPage () {
            width: '40rem',
            paddingTop: '0rem',
            //color: 'red',
-           paddingTop: '2rem'
+           //paddingTop: '2rem'
            }}
         >
        {/* <img src={Lessons[lessonid].pic} alt="array logo" className='lesson picture'/>*/} 
