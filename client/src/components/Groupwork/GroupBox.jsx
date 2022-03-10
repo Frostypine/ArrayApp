@@ -1,12 +1,9 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap';
-//import * as ReactDom from 'react-dom';
+import taskData from './TaskData';
 
 //import './gwScript.js';
 import './Groupwork.css'
-import taskData from './TaskData'; 
-import { useDropzone } from "react-dropzone";
-
 
  function GroupBox() {
 
@@ -14,20 +11,20 @@ let groupMemberArr = ["Alex", "Anthony", "Bowen", "Dustin"];//, "Ethan", "Katie"
 
 
 
-// drag and drop functions
-function allowDrop(e) {
-  e.preventDefault();
-}
+// // drag and drop functions
+// function allowDrop(e) {
+//   e.preventDefault();
+// }
 
-function drag(e) {
- //e.dataTransfer.setData("text", e.target.id);
-  //e.dataTransfer.setData("name", e.target.text);
-}
+// function drag(e) {
+//  //e.dataTransfer.setData("text", e.target.id);
+//   //e.dataTransfer.setData("name", e.target.text);
+// }
 
-function drop(e) {
-  e.preventDefault();
- // pillDrop(e);
-}
+// function drop(e) {
+//   e.preventDefault();
+//  // pillDrop(e);
+// }
 
 
 
@@ -36,36 +33,24 @@ function drop(e) {
         {/* <script src="gwScript.js"></script> */}
         GroupBox
 <div className='groupMember-list'>
-
 {groupMemberArr.map((member,i) => (
 
 <p key={i}
-draggable='true'
+//draggable='true'
 //onDragStart={drag(e)}
 //id={`drag${i}`}
 >{member} <br/></p>
 //console.log(member)
-
-
 ) ) }
 </div>
         <Container 
         
         >
     <Row>
-    {taskData.map((data, i)=> {
-        return (
-          <div
-          key={`task${i}`}
-          > 
-<Col > {data.name}</Col>
-          </div> 
-       
-       );
-      })}        
+          <Col > task 1</Col>  <Col>task 2</Col>  <Col>task 3</Col> <Col>task 4</Col>
     </Row>
-  
-        {/*  <Col id='task-1'
+    <Row>
+         <Col id='task-1'
          >
          <div
          style={{
@@ -73,18 +58,9 @@ draggable='true'
            width: '10rem',
            border: `6px solid blue` ,
          }}
-          onDrop={drop(e) } onDragOver={allowDrop(e)}
-         >1</div> */}
-             <Row>
-                {taskData.map((data, i)=> {
-        return (
-         
-<Col id={`task-${i}`} key={`task${i}`}> {i}</Col>
-            
-       );
-      })}
-    </Row>     
-    
+         // onDrop={drop(e) } onDragOver={allowDrop(e)}
+         >1</div></Col>  <Col id='task-2'>2</Col>  <Col id='task-2' >3</Col> <Col id='task-4'>4</Col>
+    </Row>
     <Row>
 
     </Row>
