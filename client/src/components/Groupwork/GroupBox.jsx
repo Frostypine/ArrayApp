@@ -1,10 +1,13 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap';
-import * as ReactDom from 'react-dom';
+//import * as ReactDom from 'react-dom';
 
 //import './gwScript.js';
 import './Groupwork.css'
 import taskData from './TaskData'; 
+import { useDropzone } from "react-dropzone";
+
+
  function GroupBox() {
 
 let groupMemberArr = ["Alex", "Anthony", "Bowen", "Dustin"];//, "Ethan", "Katie", "Shawn", "Steve", "Taylor", "Trevor", "Rison", "Solomon"];
@@ -33,14 +36,17 @@ function drop(e) {
         {/* <script src="gwScript.js"></script> */}
         GroupBox
 <div className='groupMember-list'>
+
 {groupMemberArr.map((member,i) => (
 
 <p key={i}
 draggable='true'
-onDragStart={drag(e)}
+//onDragStart={drag(e)}
 //id={`drag${i}`}
 >{member} <br/></p>
 //console.log(member)
+
+
 ) ) }
 </div>
         <Container 
@@ -70,7 +76,7 @@ onDragStart={drag(e)}
           onDrop={drop(e) } onDragOver={allowDrop(e)}
          >1</div> */}
              <Row>
-                {Tasks.map((data, i)=> {
+                {taskData.map((data, i)=> {
         return (
          
 <Col id={`task-${i}`} key={`task${i}`}> {i}</Col>
