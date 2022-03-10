@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-
+import '../Components.css'
 import { Container, Modal,Form, InputGroup, FormControl, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 //import {useSelector} from 'react-redux'
 //import { selectTasks } from "../../state/taskSlice";
+//import './Task.css'
 import { postTask } from "../../actions/taskActions";
 
-//import './Task.css'
-import '../Components.css'
 
 
 
@@ -90,7 +89,7 @@ function NewTask() {
           />
         </Form.Group>
         <Form.Group className="mb-3" >
-          <Form.Control as="textarea"
+          <Form.Control //as="textarea"
             className="duedate-input"
             placeholder="due date"
             value={duedate}

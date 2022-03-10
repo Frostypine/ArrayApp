@@ -1,19 +1,18 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import './Groupwork.css'; 
-import tasks from './TaskData';
-//import { useSelector } from "react-redux";
-//import { selectTasks } from "../../state/taskSlice";
-
+import { useSelector } from "react-redux";
+import { selectTasks } from "../../state/taskSlice";
+//import tasks from './TaskData';
 
  function TaskList() {
- //const Tasks = useSelector(selectTasks);
+ const tasks = useSelector(selectTasks);
 
   return (
     <div className='task-list'>
     
     <Container 
-      // className='aBox'
+      className='taskBox'
         >
     <Row>
               {tasks.map((data, i)=> {

@@ -11,7 +11,6 @@ export const getTasks = () => async (dispatch) => {
   try {
     const { data } = await api.readTasks();
   // console.log(data)
-
     dispatch(allTasks(data));
   } catch (error) {
     console.log(error);
@@ -19,7 +18,7 @@ export const getTasks = () => async (dispatch) => {
 };
 
 export const postTask = (newTask) => async (dispatch) => {
- // console.log(newTask)
+  console.log(newTask)
   try {
     const { data } = await api.createTask(newTask);
     dispatch(addTask(data));
