@@ -1,5 +1,5 @@
 import React from 'react';
-//import GroupBox from './GroupBox';
+import GroupBox from './GroupBox';
 
 function Groupwork () {
     return ( 
@@ -14,7 +14,7 @@ function Groupwork () {
          color: 'blue'
          }}>
             Groupwork
-            {/* <GroupBox/> */}
+            <GroupBox/>
              </div> 
     </div>
         );
