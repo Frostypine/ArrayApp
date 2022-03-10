@@ -8,8 +8,8 @@ import React from 'react'
 let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
   return (
     <div className='GroupBox'>
-        {/* <script src="gwScript.js"></script> */}
-        GroupBox
+        {/* <script src="gwScript.js"></script>  GroupBox */}
+      
 <div className='groupMember-list'>
 {groupMemberArr.map((member,i) => (
 

@@ -9,5 +9,4 @@ const resourceSchema = mongoose.Schema({
 });
 
 const Resources = mongoose.model("resource", resourceSchema)
-
 export default Resources; 

@@ -9,5 +9,4 @@ const taskSchema = mongoose.Schema({
 });
 
 const Tasks = mongoose.model("task", taskSchema)
-
 export default Tasks; 

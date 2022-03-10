@@ -1,24 +1,25 @@
-import './App.css';
-import React from 'react'
-import {Route, Routes} from "react-router-dom"; 
-import { useEffect } from 'react';
-import { useDispatch} from "react-redux";
-//import {useSelector }from "react-redux";
-import { getLessons } from "./actions/lessonActions";
+import   './App.css';
+import   React          from 'react'
+import { Route, Routes} from 'react-router-dom'; 
+import { useEffect }    from 'react';
+import { useDispatch}   from 'react-redux';
+import { getLessons }   from './actions/lessonActions';
 import { getResources } from './actions/resourceActions';
+import { getTasks}      from './actions/taskActions';
+import   Home           from './components/Home';
+import   Options        from './components/Options';
+import   Assignments    from './components/Assignments/Assignments';
+import   Groupwork      from './components/Groupwork/Groupwork';
+import  Lessons         from './components/Lessons/Lessons';
+import  Resources       from './components/Resources/Resources';
+import  Navigation      from './components/Navigation'; 
+import  Schedule        from './components/Assignments/Schedule';
+import  LessonPage      from './components/Lessons/LessonPage';
 
-import Home            from './components/Home';
-import Options         from './components/Options';
-import Assignments     from './components/Assignments/Assignments';
-import Groupwork       from './components/Groupwork/Groupwork';
-import Lessons         from './components/Lessons/Lessons';
-import Resources       from './components/Resources/Resources';
-import Navigation      from './components/Navigation'; 
-import Schedule         from './components/Assignments/Schedule';
 //import User from "./components/User/User";
 //import UserLogin       from './components/User/UserLogin';
 //import NewLesson from './components/Lessons/NewLesson';
-import LessonPage from './components/Lessons/LessonPage';
+
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
   useEffect(() => {
     dispatch(getResources()) } , [] );
     
+    useEffect(() => {
+      dispatch(getTasks()) } , [] );  
+
   return (
 <div className="App">
   {/*  */}<Navigation/>

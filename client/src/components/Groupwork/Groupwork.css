@@ -2,12 +2,14 @@
     display: flex;
     border: 6px solid blue ;
     text-align: center;
-    width: 35rem;
-    padding-left: 2rem;
-    /* overflow-x: scroll; */
+    
+   padding-left: 2rem;
+    overflow-x: scroll;
+    /*width: 35rem;  */
 }
 .task-name{
     display: flex;
+    text-align: center;
 }
 .aBox{
 
@@ -16,7 +18,19 @@
     border: 6px solid blue ;
    
 }
-
+.taskBox{
+     text-align: center;
+    overflow-x: scroll;
+}
 .pill{
-
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
 }
