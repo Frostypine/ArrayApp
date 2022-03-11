@@ -17,7 +17,7 @@ function Assignments () {
              Assignments<br/>
             <Link to="/schedule"> Schedule </Link>*{/* <br/> */}
             <Link to="/"> Syllabus </Link>
-            <AppCalendar/>
+             <AppCalendar/>
              </div>
     </div>
         );

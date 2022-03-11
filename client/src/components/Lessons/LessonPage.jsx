@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectLessons } from "../../state/lessonSlice";
 import {useParams} from "react-router-dom"; 
 import './Lesson.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function LessonPage () {
     const {lessonid} = useParams();
@@ -29,9 +30,15 @@ function LessonPage () {
       </div>
      
       <div className='lessonText'>{Lessons[lessonid].text}</div>
-      {/*  &nbsp;
-       <div>{lesson.author}</div>
-        */}
+
+      <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    read
+  </label>
+</input>
+</div>
+    
       </div>
   </div>
     )

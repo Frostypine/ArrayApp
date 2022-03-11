@@ -4,12 +4,14 @@ import './Groupwork.css';
 import { useSelector } from "react-redux";
 import { selectTasks } from "../../state/taskSlice";
 //import tasks from './TaskData';
+import Draggable from 'react-draggable';
 
  function TaskList() {
  const tasks = useSelector(selectTasks);
 
   return (
-    <div className='task-list'>
+   
+       <div className='task-list'>
     
     <Container 
       className='taskBox'
@@ -17,12 +19,14 @@ import { selectTasks } from "../../state/taskSlice";
     <Row>
               {tasks.map((data, i)=> {
         return (
+          <Draggable>
           <Col
           className="task-name aBox"
           key={i}
           > 
          {data.name}
-          </Col> 
+          </Col>  
+          </Draggable>
        );
       })} 
     </Row>
@@ -42,10 +46,8 @@ import { selectTasks } from "../../state/taskSlice";
 
         </Container>
 
-
- 
-
       </div>
+      
   );
 }
 

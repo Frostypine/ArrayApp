@@ -1,26 +1,126 @@
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import Draggable from "react-draggable";
 import './Groupwork.css'
-import React from 'react'
 
+ export default class MemberBox extends Component {
 
+    
+  
+  constructor(props) {
 
- function MemberBox() {
+      let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
 
-let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
-  return (
-    <div className='GroupBox'>
-        {/* <script src="gwScript.js"></script>  GroupBox */}
-      
+    super(props);
+    this.state = {
+      activeDrags: 0,
+      deltaPosition: {
+        x: 0,
+        y: 0
+      },
+      controlledPosition: {
+        x: -400,
+        y: 200
+      }
+    };
+    this.handleDrag = this.handleDrag.bind(this);
+    this.onStart = this.onStart.bind(this);
+    this.onStop = this.onStop.bind(this);
+    this.adjustXPos = this.adjustXPos.bind(this);
+    this.adjustYPos = this.adjustYPos.bind(this);
+    this.onControlledDrag = this.onControlledDrag.bind(this);
+    this.onControlledDragStop = this.onControlledDragStop.bind(this);
+  }
+
+  handleDrag(e, ui) {
+    const { x, y } = this.state.deltaPosition;
+    this.setState({
+      deltaPosition: {
+        x: x + ui.deltaX,
+        y: y + ui.deltaY
+      }
+    });
+  }
+
+  onStart() {
+    this.setState({ activeDrags: ++this.state.activeDrags });
+  }
+
+  onStop() {
+    this.setState({ activeDrags: --this.state.activeDrags });
+  }
+  // For controlled component
+  adjustXPos(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const { x, y } = this.state.controlledPosition;
+    this.setState({ controlledPosition: { x: x - 10, y } });
+  }
+
+  adjustYPos(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const { controlledPosition } = this.state;
+    const { x, y } = controlledPosition;
+    this.setState({ controlledPosition: { x, y: y - 10 } });
+  }
+
+  onControlledDrag(e, position) {
+    const { x, y } = position;
+    this.setState({ controlledPosition: { x, y } });
+  }
+
+  onControlledDragStop(e, position) {
+    this.onControlledDrag(e, position);
+    this.onStop();
+  }
+  render() {
+    const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
+    const { deltaPosition, controlledPosition } = this.state;
+    let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
+    return (
+      <div className='GroupBox'>
+     
 <div className='groupMember-list'>
 {groupMemberArr.map((member,i) => (
 
+<Draggable>
 <p key={i}
-className = "pill"
+className =  {`pill${i}`+ "pill"}
+style = {{
+  background: 'red',
+  color: 'white',
+  zIndex: 3,
+  border: 'none',
+  padding: '5px 10px',
+  borderRadius: '16px',
+  cursor: 'pointer',
+    
+//     padding: '5px 10px',
+//     text-align: 'center',
+//     text-decoration: 'none',
+//     display: 'inline-block',
+//     margin: '4px 2px',
+//     cursor: 'pointer',
+//     border-radius: '16px',
+// 
+
+}}
 >{member}{} <br/>
 </p>
+
+</Draggable>
 ) ) }
+
 </div>
-        
-    </div>
-  )
+      
+   
+     
+      </div>
+    );
+  }
 }
-export default MemberBox; 
+
+//const rootElement = document.getElementById("root");
+//ReactDOM.render(<MemberBox />, rootElement);
+

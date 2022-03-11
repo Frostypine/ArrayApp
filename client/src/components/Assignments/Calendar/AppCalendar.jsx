@@ -17,7 +17,7 @@ import calmap from './CalMap';
     <Container fluid className='calendar-app'>
     <h1 className='text-center'>Calendar</h1>
 
-    <div className='calendar-container'>
+   <div className='calendar-container mx-auto'>
       <Calendar onChange={setDate} value={date} />
     </div>
     <p className='text-center dateBox'>

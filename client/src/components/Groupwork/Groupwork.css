@@ -4,8 +4,8 @@
     text-align: center;
     
    padding-left: 2rem;
-    overflow-x: scroll;
-    /*width: 35rem;  */
+   
+    /*overflow-x: scroll; width: 35rem;  */
 }
 .task-name{
     display: flex;
@@ -33,4 +33,10 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
+}
+
+.pill0 {
+    position: absolute;
+     bottom: 100px;
+      right: 100px; 
 }

@@ -11,6 +11,8 @@ const lessonSchema = mongoose.Schema({
    type: String,
    default: new Date().toISOString,
   },
+
+  amap: {type: Map, default: [["",""]]}
   // picture: {
   //   type: String,
   //   default:
