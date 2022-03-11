@@ -4,7 +4,9 @@
   Array Bootcamp Fall 2021 -Spring 2022
   Katie Greenwald
 */
-
+.taskAssignment{
+    overflow-x: scroll;
+}
 .groupMember-list{
     display: flex;
     border: 6px solid blue ;
@@ -27,7 +29,7 @@
 }
 .taskBox{
      text-align: center;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 .pill{
     background-color: red;
