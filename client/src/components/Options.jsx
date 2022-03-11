@@ -1,6 +1,8 @@
+//
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import React from 'react'
-
-
 import './Components.css';
 import {Link} from 'react-router-dom';
 import { Container,  Card } from 'react-bootstrap';

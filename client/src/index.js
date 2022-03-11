@@ -2,6 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+//
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import App from './App';
 import {Provider} from 'react-redux';
 import store from './state/store/store'; 

@@ -1,3 +1,7 @@
+//taskAPI.js
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import axios from "axios"
 
 const API = axios.create({baseURL: "http://localhost:5000/api/tasks"})

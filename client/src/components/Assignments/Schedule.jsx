@@ -1,3 +1,7 @@
+//Schedule.jsx
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import React from 'react'
 import '../Components.css'; 
 

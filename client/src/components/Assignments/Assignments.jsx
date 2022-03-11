@@ -1,3 +1,7 @@
+//Assignments.jsx
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import {Link} from 'react-router-dom';
 import AppCalendar from './Calendar/AppCalendar';
 import './Assignments.css'; 

@@ -1,3 +1,7 @@
+//
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";

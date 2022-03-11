@@ -1,3 +1,7 @@
+//
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";

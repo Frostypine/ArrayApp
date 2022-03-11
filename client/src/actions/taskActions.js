@@ -1,3 +1,7 @@
+//taskActions.js
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import * as api from "../api/taskAPI.js";
 import {
   allTasks,

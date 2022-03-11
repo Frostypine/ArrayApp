@@ -1,3 +1,7 @@
+//
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Draggable from "react-draggable";

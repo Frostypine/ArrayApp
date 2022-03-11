@@ -1,5 +1,10 @@
+//MemberBox.jsx
+//Capstone Project
+//Array Bootcamp Fall 2021 -Spring 2022
+//Katie Greenwald
+
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import Draggable from "react-draggable";
 import './Groupwork.css'
 
@@ -9,7 +14,7 @@ import './Groupwork.css'
   
   constructor(props) {
 
-      let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
+      //let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
 
     super(props);
     this.state = {
@@ -42,13 +47,13 @@ import './Groupwork.css'
     });
   }
 
-  onStart() {
-    this.setState({ activeDrags: ++this.state.activeDrags });
-  }
+  // onStart() {
+  //   this.setState({ activeDrags: ++this.state.activeDrags });
+  // }
 
-  onStop() {
-    this.setState({ activeDrags: --this.state.activeDrags });
-  }
+  // onStop() {
+  //   this.setState({ activeDrags: --this.state.activeDrags });
+  // }
   // For controlled component
   adjustXPos(e) {
     e.preventDefault();
@@ -75,8 +80,8 @@ import './Groupwork.css'
     this.onStop();
   }
   render() {
-    const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
-    const { deltaPosition, controlledPosition } = this.state;
+   // const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
+    //const { deltaPosition, controlledPosition } = this.state;
     let groupMemberArr = ["Person1", "Person2", "Person3", "Person4"];
     return (
       <div className='GroupBox'>
@@ -86,7 +91,8 @@ import './Groupwork.css'
 
 <Draggable>
 <p key={i}
-className =  {`pill${i}`+ "pill"}
+id =  {`pill${i}`}
+className="pill"
 style = {{
   background: 'red',
   color: 'white',
